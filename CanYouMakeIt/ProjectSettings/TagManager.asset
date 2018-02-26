@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Draggable
   - dot
+  - Text_Money
   layers:
   - Default
   - TransparentFX

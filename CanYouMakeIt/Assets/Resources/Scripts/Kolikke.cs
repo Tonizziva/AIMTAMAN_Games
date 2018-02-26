@@ -4,16 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Kolikke : MonoBehaviour {
-	public Text money;
+	Text money;
 	public static int currentMoney = 0;
 
 	void Start() {
+		money = GameObject.Find ("Money").GetComponent<Text> ();
 		money.text = currentMoney.ToString();
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {
-		currentMoney = currentMoney + 1;
-		money.text = currentMoney.ToString();
-		Destroy (gameObject); 
+		if (col.gameObject.tag == "dot") {
+			currentMoney = currentMoney + 1;
+			money.text = currentMoney.ToString ();
+			Destroy (gameObject); 
+		} else {
+			Destroy (gameObject);
+		}
 	}
 }
