@@ -17,7 +17,7 @@ public class Kolikke : MonoBehaviour {
 			currentMoney = currentMoney + 1;
 			money.text = currentMoney.ToString ();
 			Destroy (gameObject); 
-		} else {
+		} else if(col.gameObject.tag != "Finish"){
 			Destroy (gameObject);
 		}
 	}
