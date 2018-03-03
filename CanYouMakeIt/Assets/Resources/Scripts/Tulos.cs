@@ -5,13 +5,19 @@ using UnityEngine;
 
 public class Tulos : MonoBehaviour {
 	public Text text;
-	int tulos;
+    public Text hscore;
+    int tulos;
 
 	// Use this for initialization
-	void Start () {
+	void Start () { 
 		tulos = Counter.tulos;
-		text.text = tulos.ToString();
-	}
+        if (PlayerPrefs.GetInt("Highscore", 0)  <= tulos)
+        {
+            PlayerPrefs.SetInt("Highscore", tulos);
+        }
+        text.text = tulos.ToString();
+        hscore.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {
