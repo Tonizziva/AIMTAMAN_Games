@@ -15,7 +15,7 @@ public class LevelEditor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		for (int i=0;i<60;i++) {
-			int r = Random.Range (1, 7);
+			int r = Random.Range (1, 8);
 			float r2 = Random.Range (-2, 2);
 
 			(Instantiate(Resources.Load("Prefabs/Este"+r),	new Vector2(0.7f, (i+1)*4), Quaternion.identity)

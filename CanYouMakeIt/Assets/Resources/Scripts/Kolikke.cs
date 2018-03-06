@@ -9,6 +9,7 @@ public class Kolikke : MonoBehaviour {
 
 	void Start() {
 		money = GameObject.Find ("Money").GetComponent<Text> ();
+		currentMoney = PlayerPrefs.GetInt ("Money", 0);
 		money.text = currentMoney.ToString();
 	}
 
