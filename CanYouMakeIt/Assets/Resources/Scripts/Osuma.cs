@@ -21,6 +21,11 @@ public class Osuma : MonoBehaviour {
             Debug.Log("Osui2");
             Paina1.start = false;
 			Paina1.pause = true;
+            if (Paina1.vibration == true)
+            {
+                Handheld.Vibrate();
+            }
         }
+
     }
 }

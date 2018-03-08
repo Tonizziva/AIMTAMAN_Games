@@ -10,12 +10,25 @@ public class Paina1 : MonoBehaviour {
 	public Vector3 liikkuminen;
 	float k = 1;
 	public static bool pause = true;
+    public static bool vibration = true;
+
 
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
+    public void Settings()
+    {
+        if (vibration == true)
+        {
+            vibration = false;
+        }
+        else
+        {
+            vibration = true;
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0)) {
@@ -72,8 +85,8 @@ public class Paina1 : MonoBehaviour {
 	void pauseGame() {
 		start = false;
 		pause = true;
-        Handheld.Vibrate();
 
+       
         for (int i = 0; i < esteet.transform.childCount; i++) {
 			esteet.transform.GetChild (i).GetComponent<Rigidbody2D> ().velocity = new Vector3(0,0,0);
 		}
