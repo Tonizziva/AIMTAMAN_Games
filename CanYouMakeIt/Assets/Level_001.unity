@@ -400,12 +400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335b95e74db1e0943831422620c78758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  este0: {fileID: 1043762950426830, guid: 535aa5d030cc32f4aaff47540750b442, type: 2}
-  este1: {fileID: 1367360888074322, guid: dda6b7e10dc782c4c9b266f6a76a4d5a, type: 2}
-  este2: {fileID: 1889802712429678, guid: e05aa38ba08e276468f3be6963cb77a1, type: 2}
-  este3: {fileID: 1585885572051098, guid: e9fa2e29d8b15aa4faac546aa5242e0e, type: 2}
-  este4: {fileID: 1396758530608266, guid: 6f5930a7e878dfb4daff7ed33211c995, type: 2}
-  este5: {fileID: 1153474087346144, guid: 685806f9571a02148ba7c345d50d746d, type: 2}
   esteet: {fileID: 1290860502}
   kolikot: {fileID: 1971711346118624, guid: ea08b072939741244919ed0ce504d68d, type: 2}
 --- !u!4 &275802121
