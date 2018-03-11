@@ -32,3 +32,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
