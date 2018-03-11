@@ -8,7 +8,7 @@ public class LevelEditor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		for (int i=0;i<60;i++) {
+		for (int i=0;i<100;i++) {
 			int r = Random.Range (1, 8);
 			float r2 = Random.Range (-2, 2);
 
