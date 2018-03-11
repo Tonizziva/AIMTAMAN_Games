@@ -912,7 +912,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1493816596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.774025, y: -0.055431575, z: 0.10747707}
+  m_LocalPosition: {x: 7.774025, y: 3.5, z: 0.10747707}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -931,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esteet: {fileID: 1290860502}
   kolikot: {fileID: 1971711346118624, guid: ea08b072939741244919ed0ce504d68d, type: 2}
+  pos: {fileID: 0}
 --- !u!1 &1526531494
 GameObject:
   m_ObjectHideFlags: 0
