@@ -5,9 +5,17 @@ using UnityEngine;
 public class HideObjects : MonoBehaviour {
     public GameObject esteet;
     public GameObject kolikot;
+    public Transform pos;
+
+    void Start()
+    {
+        
+    }
 
     void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log(col.gameObject.transform.parent.tag);
+        Debug.Log(col.gameObject.transform.parent.parent.childCount);
+        Debug.Log(col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 2).transform.position);
+        pos = col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 2).transform;
         if (col.gameObject.transform.parent.tag.Equals("spawn"))
         {
             Debug.Log("poistettiin este1");
@@ -24,10 +32,10 @@ public class HideObjects : MonoBehaviour {
             int r = Random.Range(1, 8);
             float r2 = Random.Range(-2, 2);
 
-            (Instantiate(Resources.Load("Prefabs/Level001/Este" + r), new Vector2(0.7f, (i + 1) * 4), Quaternion.identity)
+            (Instantiate(Resources.Load("Prefabs/Level001/Este" + r), new Vector2(0.7f, (pos.transform.position.y) + 3), Quaternion.identity)
                 as GameObject).transform.parent = esteet.transform;
 
-            (Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (i + 2) * 4), Quaternion.identity)
+            (Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (pos.transform.position.y) + 4), Quaternion.identity)
                 as GameObject).transform.parent = esteet.transform;
         }
     }

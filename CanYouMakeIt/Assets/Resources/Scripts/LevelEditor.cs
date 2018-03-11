@@ -13,7 +13,7 @@ public class LevelEditor : MonoBehaviour {
 
     void loadEsteet()
     {
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 5; i++)
         {
             int r = Random.Range(1, 8);
             float r2 = Random.Range(-2, 2);
