@@ -11,6 +11,7 @@ public class Tulos : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () { 
+		AdManager.Instance.ShowVideo ();
 		tulos = Counter.tulos;
 		PlayerPrefs.SetInt ("Money",Kolikke.currentMoney);
 

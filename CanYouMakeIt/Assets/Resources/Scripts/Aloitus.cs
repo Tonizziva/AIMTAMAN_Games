@@ -6,7 +6,7 @@ public class Aloitus : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-		
+		AdManager.Instance.ShowBanner ();
 	}
 	
 	// Update is called once per frame

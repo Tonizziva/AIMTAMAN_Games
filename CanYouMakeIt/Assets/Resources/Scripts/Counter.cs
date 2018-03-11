@@ -13,7 +13,7 @@ public class Counter : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (Paina1.start == true)
         {
             tulos = tulos + 1;
