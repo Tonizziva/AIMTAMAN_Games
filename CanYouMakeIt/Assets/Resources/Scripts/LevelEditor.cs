@@ -7,12 +7,15 @@ public class LevelEditor : MonoBehaviour {
 	public GameObject esteet;
 	public GameObject kolikot;
     Text money;
+    public static int currentMoney = 0;
 
     // Use this for initialization
     void Start () {
         money = GameObject.Find("Money").GetComponent<Text>();
-        money.text = PlayerPrefs.GetInt("Money", 0).ToString();
-        
+        currentMoney = PlayerPrefs.GetInt("Money", 0);
+        money.text = currentMoney.ToString();
+           
+
         loadEsteet();
 	}
 

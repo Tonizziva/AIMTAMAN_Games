@@ -13,7 +13,7 @@ public class Tulos : MonoBehaviour {
 	void Start () { 
 		//AdManager.Instance.ShowVideo ();
 		tulos = Counter.tulos;
-		PlayerPrefs.SetInt ("Money",Kolikke.currentMoney);
+		PlayerPrefs.SetInt ("Money",LevelEditor.currentMoney);
 
         if (PlayerPrefs.GetInt("Highscore", 0)  <= tulos)
         {

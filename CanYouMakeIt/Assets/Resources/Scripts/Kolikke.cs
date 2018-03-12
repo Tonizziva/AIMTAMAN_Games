@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Kolikke : MonoBehaviour {
 	Text money;
-	public static int currentMoney = 0;
 
 	void Start() {
 		money = GameObject.Find ("Money").GetComponent<Text> ();
@@ -15,8 +14,8 @@ public class Kolikke : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.gameObject.tag == "dot") {
-			currentMoney = currentMoney + 1;
-			money.text = currentMoney.ToString ();
+			LevelEditor.currentMoney = LevelEditor.currentMoney + 1;
+			money.text = LevelEditor.currentMoney.ToString ();
 			Destroy (gameObject); 
 		} else if(col.gameObject.tag == "remove"){
 			Destroy (gameObject.transform.parent.gameObject);
