@@ -56,7 +56,7 @@ public class Paina1 : MonoBehaviour {
 
 		if (Input.GetMouseButtonUp (0)) {
 			Destroy (sormi);
-			//pauseGame ();
+			pauseGame ();
             
 		}
 	}

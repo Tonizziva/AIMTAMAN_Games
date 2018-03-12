@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelEditor : MonoBehaviour {
 	public GameObject esteet;
 	public GameObject kolikot;
+    Text money;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        money = GameObject.Find("Money").GetComponent<Text>();
+        money.text = PlayerPrefs.GetInt("Money", 0).ToString();
+        
         loadEsteet();
 	}
 
@@ -19,7 +24,7 @@ public class LevelEditor : MonoBehaviour {
         for (int i = 0; i < 5; i++)
         {
             Transform pos = (esteet.transform.GetChild(esteet.transform.childCount - 2).GetChild(0).transform);
-            Debug.Log(esteet.transform.GetChild(esteet.transform.childCount - 1).GetChild(0).name);
+            Debug.Log(esteet.transform.GetChild(esteet.transform.childCount - 2).GetChild(0).name);
             int r = Random.Range(1, 8);
             float r2 = Random.Range(-2, 2);
 
