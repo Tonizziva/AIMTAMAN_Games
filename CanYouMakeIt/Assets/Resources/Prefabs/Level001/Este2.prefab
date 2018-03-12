@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 50317183857072784}
   m_Layer: 0
   m_Name: Este2
-  m_TagString: spawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

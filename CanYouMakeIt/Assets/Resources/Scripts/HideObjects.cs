@@ -5,7 +5,7 @@ using UnityEngine;
 public class HideObjects : MonoBehaviour {
     public GameObject esteet;
     public GameObject kolikot;
-    public Transform pos;
+    Transform pos;
 
     void Start()
     {
@@ -13,30 +13,29 @@ public class HideObjects : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log(col.gameObject.transform.parent.parent.childCount);
-        Debug.Log(col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 2).transform.position);
-        pos = col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 2).transform;
-        if (col.gameObject.transform.parent.tag.Equals("spawn"))
-        {
-            Debug.Log("poistettiin este1");
-            loadEsteet();
-        }
-    Destroy(col.gameObject);
         
+        if (col.gameObject.tag.Equals("spawn"))
+        {
+            Debug.Log(col.gameObject.name);
+            Debug.Log("poistettiin este1");
+            Destroy(col.transform.parent.gameObject);
+            loadEsteet(col.gameObject);
+        }
     }
 
-    void loadEsteet()
+    void loadEsteet(GameObject col)
     {
-        for (int i = 0; i < 1; i++)
-        {
-            int r = Random.Range(1, 8);
-            float r2 = Random.Range(-2, 2);
+        int r = Random.Range(1, 8);
+        float r2 = Random.Range(-2, 2);
 
-            (Instantiate(Resources.Load("Prefabs/Level001/Este" + r), new Vector2(0.7f, (pos.transform.position.y) + 3), Quaternion.identity)
-                as GameObject).transform.parent = esteet.transform;
+        pos = col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 1).GetChild(0).transform; 
 
-            (Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (pos.transform.position.y) + 4), Quaternion.identity)
-                as GameObject).transform.parent = esteet.transform;
-        }
+        (Instantiate(Resources.Load("Prefabs/Level001/Este" + 1), new Vector2(0.7f, (pos.transform.position.y)+4), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
+
+        Debug.Log("Spawnatun objectin paikka");
+        Debug.Log(col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 2).transform.position);
+        Debug.Log("--------------------------------------------------------");
+
+        //(Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (pos.transform.position.y) +4), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - dot
   - Text_Money
   - spawn
+  - remove
   layers:
   - Default
   - TransparentFX
