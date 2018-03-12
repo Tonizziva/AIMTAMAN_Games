@@ -36,6 +36,6 @@ public class HideObjects : MonoBehaviour {
         Debug.Log(col.gameObject.transform.parent.parent.GetChild(col.gameObject.transform.parent.parent.childCount - 2).transform.position);
         Debug.Log("--------------------------------------------------------");
 
-        //(Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (pos.transform.position.y) +4), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
+        (Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (pos.transform.position.y) +6), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
     }
 }
