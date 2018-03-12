@@ -23,7 +23,7 @@ public class LevelEditor : MonoBehaviour {
             int r = Random.Range(1, 8);
             float r2 = Random.Range(-2, 2);
 
-            (Instantiate(Resources.Load("Prefabs/Level001/Este" + 1), new Vector2(0.7f, (pos.transform.position.y)+4), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
+            (Instantiate(Resources.Load("Prefabs/Level001/Este" + r), new Vector2(0.7f, (pos.transform.position.y)+4), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
 
             //(Instantiate(Resources.Load("Prefabs/kolikkoryhmä"), new Vector2(r2, (i + 2) ), Quaternion.identity) as GameObject).transform.parent = esteet.transform;
         }
