@@ -17,3 +17,7 @@ EditorBuildSettings:
     path: Assets/Level_002.unity
   - enabled: 1
     path: Assets/Level_001.unity
+  - enabled: 1
+    path: Assets/Menu_Levels.unity
+  - enabled: 1
+    path: Assets/Menu_Shop.unity
