@@ -201,7 +201,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: E:/Data/GitHub/AIMTAMAN_Games/CanYouMakeIt/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeyaliasName: cymiid
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
